@@ -40,7 +40,7 @@ window.addEventListener('resize', searchToggler);
 
 //Burger menu logic
 const menu = document.querySelector('.nav-burger-menu');
-menu.addEventListener("mouseenter" || "click", (e) => {
+menu.addEventListener("mouseenter", (e) => {
   document.getElementById("menu__first-line").style.transform = "rotate(45deg)";
   document.getElementById("menu__first-line").style.top = "12px";
   document.getElementById("menu__second-line").style.transform = "rotate(-45deg)";
@@ -48,9 +48,8 @@ menu.addEventListener("mouseenter" || "click", (e) => {
   document.getElementById("menu__third-line").style.display = "none";
   document.getElementById("menu__pages").style.opacity = "1";
   document.getElementById("menu__pages").style.top = "0";
-
 });
-menu.addEventListener("mouseleave" || "click", (e) => {
+menu.addEventListener("mouseleave", (e) => {
   document.getElementById("menu__first-line").style.transform = "rotate(0deg)";
   document.getElementById("menu__first-line").style.top = "0px";
   document.getElementById("menu__second-line").style.transform = "rotate(0deg)";
@@ -58,4 +57,15 @@ menu.addEventListener("mouseleave" || "click", (e) => {
   document.getElementById("menu__third-line").style.display = "block";
   document.getElementById("menu__pages").style.opacity = "0";
   document.getElementById("menu__pages").style.top = "-2000px";
+});
+
+// For mobile click menu
+menu.addEventListener("click", (e) => {
+  document.getElementById("menu__first-line").style.transform = "rotate(45deg)";
+  document.getElementById("menu__first-line").style.top = "12px";
+  document.getElementById("menu__second-line").style.transform = "rotate(-45deg)";
+  document.getElementById("menu__second-line").style.top = "12px";
+  document.getElementById("menu__third-line").style.display = "none";
+  document.getElementById("menu__pages").style.opacity = "1";
+  document.getElementById("menu__pages").style.top = "0";
 });
