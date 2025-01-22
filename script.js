@@ -39,6 +39,7 @@ window.addEventListener('resize', searchToggler);
 
 
 //Burger menu logic
+//Open menu
 const menu = document.querySelector('.nav-burger-menu');
 menu.addEventListener("mouseenter", () => {
   document.getElementById("menu__first-line").style.transform = "rotate(45deg)";
@@ -49,6 +50,7 @@ menu.addEventListener("mouseenter", () => {
   document.getElementById("menu__pages").style.opacity = "1";
   document.getElementById("menu__pages").style.top = "0";
 });
+//Closing menu
 menu.addEventListener("mouseleave", () => {
   document.getElementById("menu__first-line").style.transform = "rotate(0deg)";
   document.getElementById("menu__first-line").style.top = "0px";
@@ -59,7 +61,7 @@ menu.addEventListener("mouseleave", () => {
   document.getElementById("menu__pages").style.top = "-2000px";
 });
 
-// For mobile click menu
+// For mobile click menu open
 menu.addEventListener("click", () => {
   document.getElementById("menu__first-line").style.transform = "rotate(45deg)";
   document.getElementById("menu__first-line").style.top = "12px";
@@ -68,4 +70,21 @@ menu.addEventListener("click", () => {
   document.getElementById("menu__third-line").style.display = "none";
   document.getElementById("menu__pages").style.opacity = "1";
   document.getElementById("menu__pages").style.top = "0";
+});
+
+//Closing menu on mobile and on click not inside menu
+document.addEventListener('click', (e) => {
+  const menu = document.querySelector('.nav-burger-menu');
+  const menuPages = document.getElementById('menu__pages');
+  const isClickInsideMenu = menu.contains(e.target) || menuPages.contains(e.target);
+
+  if (!isClickInsideMenu && menuPages.style.opacity === "1") {
+    document.getElementById("menu__first-line").style.transform = "rotate(0deg)";
+    document.getElementById("menu__first-line").style.top = "0px";
+    document.getElementById("menu__second-line").style.transform = "rotate(0deg)";
+    document.getElementById("menu__second-line").style.top = "8px";
+    document.getElementById("menu__third-line").style.display = "block";
+    menuPages.style.opacity = "0";
+    menuPages.style.top = "-2000px";
+  }
 });
