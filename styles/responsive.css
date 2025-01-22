@@ -119,7 +119,7 @@
     position: absolute;
     display: flex;
     right: 0px;
-    top: 0px;
+    top: -2000px;
     width: 150px;
     background-color: #989898;
     z-index: 3;
