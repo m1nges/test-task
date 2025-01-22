@@ -40,7 +40,7 @@ window.addEventListener('resize', searchToggler);
 
 //Burger menu logic
 const menu = document.querySelector('.nav-burger-menu');
-menu.addEventListener("mouseenter", (e) => {
+menu.addEventListener("mouseenter", () => {
   document.getElementById("menu__first-line").style.transform = "rotate(45deg)";
   document.getElementById("menu__first-line").style.top = "12px";
   document.getElementById("menu__second-line").style.transform = "rotate(-45deg)";
@@ -49,7 +49,7 @@ menu.addEventListener("mouseenter", (e) => {
   document.getElementById("menu__pages").style.opacity = "1";
   document.getElementById("menu__pages").style.top = "0";
 });
-menu.addEventListener("mouseleave", (e) => {
+menu.addEventListener("mouseleave", () => {
   document.getElementById("menu__first-line").style.transform = "rotate(0deg)";
   document.getElementById("menu__first-line").style.top = "0px";
   document.getElementById("menu__second-line").style.transform = "rotate(0deg)";
@@ -60,7 +60,7 @@ menu.addEventListener("mouseleave", (e) => {
 });
 
 // For mobile click menu
-menu.addEventListener("click", (e) => {
+menu.addEventListener("click", () => {
   document.getElementById("menu__first-line").style.transform = "rotate(45deg)";
   document.getElementById("menu__first-line").style.top = "12px";
   document.getElementById("menu__second-line").style.transform = "rotate(-45deg)";
