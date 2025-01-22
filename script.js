@@ -46,8 +46,8 @@ menu.addEventListener("mouseenter" || "click", (e) => {
   document.getElementById("menu__second-line").style.transform = "rotate(-45deg)";
   document.getElementById("menu__second-line").style.top = "12px";
   document.getElementById("menu__third-line").style.display = "none";
-  document.getElementById("menu__pages").style.visibility = "visible";
   document.getElementById("menu__pages").style.opacity = "1";
+  document.getElementById("menu__pages").style.top = "0";
 
 });
 menu.addEventListener("mouseleave" || "click", (e) => {
@@ -56,6 +56,6 @@ menu.addEventListener("mouseleave" || "click", (e) => {
   document.getElementById("menu__second-line").style.transform = "rotate(0deg)";
   document.getElementById("menu__second-line").style.top = "8px";
   document.getElementById("menu__third-line").style.display = "block";
-  document.getElementById("menu__pages").style.visibility = "hidden";
   document.getElementById("menu__pages").style.opacity = "0";
+  document.getElementById("menu__pages").style.top = "-2000px";
 });
